@@ -19,10 +19,11 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
 #: .\templates\account\email\base_message.txt:3
 #, python-format
 msgid "Привет от %(site_name)s!"
-msgstr ""
+msgstr "// Hello from from //%(site_name)s!"
 
 #: .\templates\account\email\base_message.txt:7
 #, python-format
@@ -30,6 +31,8 @@ msgid ""
 "Спасибо за использование %(site_name)s!\n"
 "%(site_domain)s"
 msgstr ""
+"// Thanks for using // %(site_name)s!\n"
+"%(site_domain)s"
 
 #: .\templates\account\email\email_confirmation_message.txt:7
 #, python-format
@@ -43,3 +46,11 @@ msgid ""
 "\n"
 "Хорошего дня!\n"
 msgstr ""
+"\n"
+"// You received this message because the user //\n"
+"%(user_display)s // specified this email when registering on the site // "
+"%(site_domain)s.\n"
+"\n"
+"// Follow the link to confirm your registration. // %(activate_url)s\n"
+"\n"
+"// Have a good day! //\n"
