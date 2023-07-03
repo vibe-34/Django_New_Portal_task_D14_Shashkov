@@ -1,4 +1,7 @@
-<!doctype html>
+<!--<!doctype html>-->
+<!-- Загружаем теги с переводами, без этой строки ничего не будет работать -->
+{% load i18n %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,24 +16,44 @@
     <link rel="stylesheet" href="{% static 'new_portal/css/new_portal.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 </head>
+
 <body>
     <aside>
         <img src="{% static 'new_portal/img/the-daily-news.svg' %}" alt="Лого">
         <span class="logo">NEW<p>autoBASS</p></span>
-        <h3>Навигация</h3>
+
+        <!-- Не забываем по csrf_token для POST запросов -->
+        <!-- В form реализуем форму выбора языка -->
+        <form action="{% url 'set_language' %}" method="POST"> {% csrf_token %}
+            <input type="hidden" name="next" value="{{ redirect_to }}">
+                {% get_current_language as LANGUAGE_CODE %}
+                <select name="language" id="">
+                    {% get_available_languages as LANGUAGES %} <!-- получаем языки -->
+                    {% get_language_info_list for LANGUAGES as languages %} <!-- Помещаем их в список languages -->
+
+                    {% for language in languages %} <!-- Итерируясь, выводим их название на языке пользователя и код -->
+                        <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected {% endif %}>
+                            {{ language.name_local }} - {{ language.code }}
+                        </option>
+                    {% endfor %}
+                </select>
+            <input type="submit" value="set">
+        </form>
+
+        <h3>{% trans "Навигация" %}</h3>
             <ul>
-                <li><a href="{% url 'account_signup' %}"><i class="bi bi-hand-index"></i>Регистрация</a></li>
-                <li><a href="{% url 'account_login' %}"><button class="btn btn-outline-success" >Вход</button></a>
-                    <a href="{% url 'account_logout' %}"><button class="btn btn-outline-danger" >Выход</button></a></li>
-                <li><a href="{% url 'home' %}"><i class="bi bi-house-door"></i>Главная</a></li>
-                <li><a href="{% url 'about' %}"><i class="bi bi-universal-access"></i>Про нас</a></li>
-                <li><a href="{% url 'news_home' %}"><i class="bi bi-card-list"></i>Новости</a></li>
-                <li><a href="{% url 'subscriptions' %}"><span class='bi bi-pencil-square'></span>Оформить подписку</a></li>
-                <li><a href="{% url 'search' %}"><i class="bi bi-search"></i>Поиск</a></li>
+                <li><a href="{% url 'account_signup' %}"><i class="bi bi-hand-index"></i>{% trans "Регистрация" %}</a></li>
+                <li><a href="{% url 'account_login' %}"><button class="btn btn-outline-success" >{% trans "Вход" %}</button></a>
+                    <a href="{% url 'account_logout' %}"><button class="btn btn-outline-danger" >{% trans "Выход" %}</button></a></li>
+                <li><a href="{% url 'home' %}"><i class="bi bi-house-door"></i>{% trans "Главная" %}</a></li>
+                <li><a href="{% url 'about' %}"><i class="bi bi-universal-access"></i>{% trans "Про нас" %}</a></li>
+                <li><a href="{% url 'news_home' %}"><i class="bi bi-card-list"></i>{% trans "Новости" %}</a></li>
+                <li><a href="{% url 'subscriptions' %}"><span class='bi bi-pencil-square'></span>{% trans "Оформить подписку" %}</a></li>
+                <li><a href="{% url 'search' %}"><i class="bi bi-search"></i>{% trans "Поиск" %}</a></li>
                 <!--Теперь будем проверять не request.user.is_authenticated, а конкретные права-->
                 {% if perms.news.add_record %}
                     <li><a href="{% url 'create' %}"><button class="btn btn-info"><i class="fas fa-plus-circle">
-                    </i>Добавить запись</button></a></li>
+                    </i>{% trans "Добавить запись" %}</button></a></li>
                 {% endif %}
 
             </ul>

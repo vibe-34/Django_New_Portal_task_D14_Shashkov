@@ -1,4 +1,8 @@
 {% extends 'new_portal/default.html'%}
+
+<!-- Загружаем теги с переводами, без этой строки ничего не будет работать -->
+{% load i18n %}
+
 {% load custom_filters %}
 
 {% block title %}{{ record.title|censorship}}{% endblock %}
@@ -6,16 +10,16 @@
 {% block content %}
     <div class="features">
         <h1>{{ record.title|censorship }}</h1>
-        <p align="left">дата публикации     <b>{{ record.data|date:'d.M.Y'}}</b></p>
+        <p align="left">{% trans "дата публикации" %}     <b>{{ record.data|date:'d.M.Y'}}</b></p>
         <p>{{ record.full_text|censorship }}</p>
 
         <!--А здесь доступ для каждой ссылки теперь будем проверять отдельно-->
         {% if perms.news.delete_record %}
-            <a href="{% url 'news_delete' record.id %}" class="btn btn-danger">Удалить</a>
+            <a href="{% url 'news_delete' record.id %}" class="btn btn-danger">{% trans "Удалить" %}</a>
         {% endif %}
 
         {% if perms.news.change_record %}
-            <a href="{% url 'news_updata' record.id %}" class="btn btn-info">Редактировать</a>
+            <a href="{% url 'news_updata' record.id %}" class="btn btn-info">{% trans "Редактировать" %}</a>
         {% endif %}
 
     </div>

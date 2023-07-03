@@ -1,4 +1,6 @@
 from django.contrib.auth.mixins import PermissionRequiredMixin
+from django.http import HttpResponse
+from django.views import View
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView
 from .filters import RecordFilter
 from .forms import RecordForm
@@ -8,6 +10,20 @@ from django.db.models import Exists, OuterRef
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_protect
 from .models import Record, Category, Subscription
+
+from django.utils.translation import gettext as _  # импортируем функцию для перевода
+
+
+class Index(View):  # TODO это тест, пробный перевод
+    def get(self, request):
+        string = _('Hello world')
+        template_name = 'news/rus.html'
+
+        # return HttpResponse(string)
+
+        context = {'string': string}
+        # return HttpResponse(render(request, 'news/rus.html', context))
+        return HttpResponse(render(request, template_name, context))
 
 
 class NewsList(ListView):                   # Класс, который наследуется от ListView

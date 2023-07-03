@@ -1,12 +1,15 @@
 {% extends 'new_portal/default.html'%}
 
+<!-- Загружаем теги с переводами, без этой строки ничего не будет работать -->
+{% load i18n %}
+
 {% load custom_filters %}
 
-{% block title %}Форма по добавлению публикации{% endblock %}
+{% block title %}{% trans "Форма по добавлению публикации" %}{% endblock %}
 
 {% block content %}
     <div class="features">
-        <h1>Форма по добавлению публикации</h1>
+        <h1>{% trans "Форма по добавлению публикации" %}</h1>
         <form method="post">
             {% csrf_token %}
             {{ form.category }}<br><br>
@@ -14,7 +17,7 @@
             {{ form.full_text }}<br>
             {{ form.data }}<br>
             <span>{{ error }}</span><!--если ошибок не было, то эта переменная будет пустой и мы её не увидим-->
-            <button class="btn btn-success" type ="submit">Добавить публикацию</button>
+            <button class="btn btn-success" type ="submit">{% trans "Добавить публикацию" %}</button>
         </form>
     </div>
 {% endblock %}

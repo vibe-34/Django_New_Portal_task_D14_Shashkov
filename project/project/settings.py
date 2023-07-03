@@ -133,8 +133,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
 # язык, который применяется в текущий момент
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
 # 'en-us'
+# 'ru'
 
 # доступные языки для перевода
 LANGUAGES = [

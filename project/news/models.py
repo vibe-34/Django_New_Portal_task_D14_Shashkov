@@ -1,6 +1,9 @@
 from django.contrib.auth.models import User
 from django.db import models
 
+from django.utils.translation import gettext as _
+from django.utils.translation import pgettext_lazy  # импортируем «ленивый» геттекст с подсказкой
+
 
 class Record(models.Model):  # Класс публикации
     title = models.CharField('Название', max_length=64)
@@ -24,7 +27,7 @@ class Record(models.Model):  # Класс публикации
 
 
 class Category(models.Model):
-    title = models.CharField(max_length=64, unique=True)
+    title = models.CharField(max_length=64, unique=True, help_text=_('category name'))  # добавим переводящийся текст подсказку к полю
 
     class Meta:
         verbose_name = 'Категория'

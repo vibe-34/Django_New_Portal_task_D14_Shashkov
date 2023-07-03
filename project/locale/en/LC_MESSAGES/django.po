@@ -1,0 +1,195 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-04 00:20+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\new_portal\templates\new_portal\about.html:15
+msgid ""
+"Студия автозвука и шумоизоляции, магазин по продаже автомобильной акустики и "
+"аксессуаров. Все права защищены."
+msgstr ""
+"Car audio and noise isolation studio, car acoustics andaccessories. All "
+"rights reserved."
+
+#: .\new_portal\templates\new_portal\default.html:43
+msgid "Навигация"
+msgstr "Navigation"
+
+#: .\new_portal\templates\new_portal\default.html:45
+msgid "Регистрация"
+msgstr "Registration"
+
+#: .\new_portal\templates\new_portal\default.html:46
+msgid "Вход"
+msgstr "Entrance"
+
+#: .\new_portal\templates\new_portal\default.html:47
+msgid "Выход"
+msgstr "Exit"
+
+#: .\new_portal\templates\new_portal\default.html:48
+msgid "Главная"
+msgstr "Home"
+
+#: .\new_portal\templates\new_portal\default.html:49
+msgid "Про нас"
+msgstr "About us"
+
+#: .\new_portal\templates\new_portal\default.html:50
+msgid "Новости"
+msgstr "News"
+
+#: .\new_portal\templates\new_portal\default.html:51
+msgid "Оформить подписку"
+msgstr "Subscribe"
+
+#: .\new_portal\templates\new_portal\default.html:52
+msgid "Поиск"
+msgstr "Search"
+
+#: .\new_portal\templates\new_portal\default.html:56
+msgid "Добавить запись"
+msgstr "Add post"
+
+#: .\new_portal\templates\new_portal\index.html:13
+msgid ""
+"Этот новостной портал, посвящен любителям качественного звука в своих "
+"автомобилях."
+msgstr ""
+"This news portal is dedicated to lovers of high-quality sound in their cars."
+
+#: .\new_portal\templates\new_portal\index.html:14
+msgid "Двигайтесь с музыкой!"
+msgstr "Move with the music!"
+
+#: .\news\models.py:30
+msgid "category name"
+msgstr ""
+
+#: .\news\templates\403.html:9
+msgid "Ошибка 403"
+msgstr "Error 403"
+
+#: .\news\templates\403.html:12
+msgid "Кажется, у Вас нет доступа к данной странице..."
+msgstr "You don't seem to have access to this page..."
+
+#: .\news\templates\daily_post.html:12
+msgid "Здравствуй! Новые публкации за последнюю неделю!"
+msgstr "Hello! New posts in the last week!"
+
+#: .\news\templates\news\create.html:8 .\news\templates\news\create.html:12
+msgid "Форма по добавлению публикации"
+msgstr "Form for adding a publication"
+
+#: .\news\templates\news\create.html:20
+msgid "Добавить публикацию"
+msgstr "Add post"
+
+#: .\news\templates\news\news_delete.html:8
+#: .\news\templates\news\news_delete.html:12
+msgid "Удаление публикации"
+msgstr "Form for adding a publication"
+
+#: .\news\templates\news\news_delete.html:16
+msgid "Удалить статью"
+msgstr "Add post"
+
+#: .\news\templates\news\news_home.html:10
+#: .\news\templates\news\news_home.html:14
+msgid "Новости на сайте"
+msgstr "News on site"
+
+#: .\news\templates\news\news_home.html:21 .\news\templates\news\search.html:28
+msgid "Читать полностью"
+msgstr "Read completely"
+
+#: .\news\templates\news\news_home.html:25 .\news\templates\news\search.html:32
+msgid "Новоcтей нет!"
+msgstr "No news!"
+
+#: .\news\templates\news\news_id.html:13
+msgid "дата публикации"
+msgstr "Add post"
+
+#: .\news\templates\news\news_id.html:18
+msgid "Удалить"
+msgstr "Delete"
+
+#: .\news\templates\news\news_id.html:22
+msgid "Редактировать"
+msgstr "Edit"
+
+#: .\news\templates\news\rus.html:28
+msgid "Check out my new cool translation"
+msgstr ""
+
+#: .\news\templates\news\search.html:10 .\news\templates\news\search.html:14
+msgid "Поиск публикации"
+msgstr "Add post"
+
+#: .\news\views.py:19
+msgid "Hello world"
+msgstr ""
+
+#: .\templates\account\email\base_message.txt:3
+#, python-format
+msgid "Привет от %(site_name)s!"
+msgstr "Hello from %(site_name)s!"
+
+#: .\templates\account\email\base_message.txt:7
+#, python-format
+msgid ""
+"Спасибо за использование %(site_name)s!\n"
+"%(site_domain)s"
+msgstr ""
+"Thanks for using %(site_name)s!\n"
+"%(site_domain)s"
+
+#: .\templates\account\email\email_confirmation_message.txt:7
+#, python-format
+msgid ""
+"\n"
+"Вы получили это сообщение, потому что пользователь\n"
+"%(user_display)s указал этот email при регистрации на сайте "
+"%(site_domain)s.\n"
+"\n"
+"Для подтверждения регистрации пройдите по ссылке %(activate_url)s\n"
+"\n"
+"Хорошего дня!\n"
+msgstr ""
+"\n"
+"You received this message because the user\n"
+"%(user_display)s specified this email when registering on the site "
+"%(site_domain)s.\n"
+"\n"
+"Follow the link to confirm your registration. %(activate_url)s\n"
+"\n"
+"Have a good day!\n"
+
+#: .\templates\subscriptions.html:4
+msgid "Подписки"
+msgstr "Subscriptions"
+
+#: .\templates\subscriptions.html:17 .\templates\subscriptions.html:20
+msgid "Подписаться"
+msgstr "Subscribe"
+
+#: .\templates\subscriptions.html:18 .\templates\subscriptions.html:21
+msgid "Отписаться"
+msgstr "Unsubscribe"

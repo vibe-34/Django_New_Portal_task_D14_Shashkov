@@ -1,16 +1,19 @@
 {% extends 'new_portal/default.html'%}
 
+<!-- Загружаем теги с переводами, без этой строки ничего не будет работать -->
+{% load i18n %}
+
 {% load custom_filters %}
 
-{% block title %}Удаление публикации{% endblock %}
+{% block title %}{% trans "Удаление публикации" %}{% endblock %}
 
 {% block content %}
     <div class="features">
-        <h1>Удаление публикации</h1>
+        <h1>{% trans "Удаление публикации" %}</h1>
         <form method="post">
             {% csrf_token %}
             <span>{{ error }}</span><!--если ошибок не было, то эта переменная будет пустой и мы её не увидим-->
-            <button class="btn btn-success" type ="submit">Удалить статью</button>
+            <button class="btn btn-success" type ="submit">{% trans "Удалить статью" %}</button>
         </form>
     </div>
 {% endblock %}
