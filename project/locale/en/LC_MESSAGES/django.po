@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-05 20:38+0300\n"
+"POT-Creation-Date: 2023-07-06 02:11+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: .\new_portal\templates\new_portal\about.html:8
+#: .\new_portal\templates\new_portal\default.html:52
+msgid "Про нас"
+msgstr "About us"
+
 #: .\new_portal\templates\new_portal\about.html:15
 msgid ""
 "Студия автозвука и шумоизоляции, магазин по продаже автомобильной акустики и "
@@ -26,43 +31,39 @@ msgstr ""
 "Car audio and noise isolation studio, car acoustics andaccessories. All "
 "rights reserved."
 
-#: .\new_portal\templates\new_portal\default.html:50
+#: .\new_portal\templates\new_portal\default.html:46
 msgid "Навигация"
 msgstr "Navigation"
 
-#: .\new_portal\templates\new_portal\default.html:52
+#: .\new_portal\templates\new_portal\default.html:48
 msgid "Регистрация"
 msgstr "Registration"
 
-#: .\new_portal\templates\new_portal\default.html:53
+#: .\new_portal\templates\new_portal\default.html:49
 msgid "Вход"
-msgstr "Entrance"
+msgstr "SignIN"
 
-#: .\new_portal\templates\new_portal\default.html:54
+#: .\new_portal\templates\new_portal\default.html:50
 msgid "Выход"
-msgstr "Exit"
+msgstr "LogOUT"
 
-#: .\new_portal\templates\new_portal\default.html:55
+#: .\new_portal\templates\new_portal\default.html:51
 msgid "Главная"
 msgstr "Home"
 
-#: .\new_portal\templates\new_portal\default.html:56
-msgid "Про нас"
-msgstr "About us"
-
-#: .\new_portal\templates\new_portal\default.html:57 .\news\models.py:26
+#: .\new_portal\templates\new_portal\default.html:53 .\news\models.py:26
 msgid "Новости"
 msgstr "News"
 
-#: .\new_portal\templates\new_portal\default.html:58
+#: .\new_portal\templates\new_portal\default.html:54
 msgid "Оформить подписку"
 msgstr "Subscribe"
 
-#: .\new_portal\templates\new_portal\default.html:59
+#: .\new_portal\templates\new_portal\default.html:55
 msgid "Поиск"
 msgstr "Search"
 
-#: .\new_portal\templates\new_portal\default.html:63
+#: .\new_portal\templates\new_portal\default.html:59
 msgid "Добавить запись"
 msgstr "Add post"
 
@@ -150,16 +151,24 @@ msgstr "Form for adding a publication"
 msgid "Удалить статью"
 msgstr "Delete article"
 
-#: .\news\templates\news\news_home.html:10
-#: .\news\templates\news\news_home.html:14
+#: .\news\templates\news\news_home.html:11
+#: .\news\templates\news\news_home.html:33
 msgid "Новости на сайте"
 msgstr "News on site"
 
-#: .\news\templates\news\news_home.html:21 .\news\templates\news\search.html:28
+#: .\news\templates\news\news_home.html:20
+msgid "Часовой пояс"
+msgstr "Time zone"
+
+#: .\news\templates\news\news_home.html:26 .\news\templates\news\search.html:20
+msgid "Найти"
+msgstr "Find"
+
+#: .\news\templates\news\news_home.html:40 .\news\templates\news\search.html:28
 msgid "Читать полностью"
 msgstr "Read completely"
 
-#: .\news\templates\news\news_home.html:25 .\news\templates\news\search.html:32
+#: .\news\templates\news\news_home.html:44 .\news\templates\news\search.html:32
 msgid "Новоcтей нет!"
 msgstr "No news!"
 
@@ -178,10 +187,6 @@ msgstr "Edit"
 #: .\news\templates\news\search.html:10 .\news\templates\news\search.html:14
 msgid "Поиск публикации"
 msgstr "Publication Search"
-
-#: .\news\templates\news\search.html:20
-msgid "Найти"
-msgstr "Find"
 
 #: .\templates\account\email\base_message.txt:3
 #, python-format

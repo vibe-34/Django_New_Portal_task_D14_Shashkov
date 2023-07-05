@@ -1,6 +1,4 @@
 from django.contrib.auth.mixins import PermissionRequiredMixin
-from django.http import HttpResponse
-from django.views import View
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView
 from .filters import RecordFilter
 from .forms import RecordForm
@@ -12,28 +10,9 @@ from django.views.decorators.csrf import csrf_protect
 from .models import Record, Category, Subscription
 
 from django.utils import timezone
+from django.shortcuts import redirect
 
-from django.utils.translation import gettext as _  # импортируем функцию для перевода
-
-
-class Index(View):  # TODO это тест, пробный перевод
-    def get(self, request):
-        # string = _('Hello world')
-        # template_name = 'news/rus.html'
-        #
-        # # return HttpResponse(string)
-        #
-        # context = {'string': string}
-        # # return HttpResponse(render(request, 'news/rus.html', context))
-        # return HttpResponse(render(request, template_name, context))
-
-        # . Translators: This message appears on the home page only
-        models = Category.objects.all()
-        context = {'models': models, }
-
-        curent_time = timezone.now()
-
-        return HttpResponse(render(request, 'news/rus.html', context))
+import pytz  # импортируем стандартный модуль для работы с часовыми поясами
 
 
 class NewsList(ListView):                   # Класс, который наследуется от ListView
@@ -42,6 +21,16 @@ class NewsList(ListView):                   # Класс, который нас�
     template_name = 'news/news_home.html'   # Указываем имя шаблона. С инструкциями о том, как показать объекты юзеру
     context_object_name = 'record'          # Имя списка содержит все объекты. Его указать, для обр.к объектам в html
     paginate_by = 10                        # указываем количество записей на странице
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['current_time'] = timezone.localtime(timezone.now())
+        context['timezones'] = pytz.common_timezones  # добавляем в контекст все доступные часовые пояса
+        return context
+
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect('news_home')  # return redirect(request.META.get('HTTP_REFERER'))
 
 
 class SearchList(ListView):

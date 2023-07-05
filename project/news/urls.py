@@ -7,7 +7,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', views.NewsList.as_view(), name='news_home'),
-    path('ru/', views.Index.as_view(), name='rus'),  # TODO это тест, пробный перевод
     path('<int:pk>', views.NewsId.as_view(), name='news_id'),  # переход по динамическим страницам
     path('create/', views.NewsCreateView.as_view(), name='create'),  # переход на страницу добавления записи
     path('search/', views.SearchList.as_view(), name='search'),

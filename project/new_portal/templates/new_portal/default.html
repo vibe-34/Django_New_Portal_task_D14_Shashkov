@@ -1,6 +1,6 @@
 <!--<!doctype html>-->
-<!-- Загружаем теги с переводами, без этой строки ничего не будет работать -->
-{% load i18n %}
+
+{% load i18n %} <!-- Загружаем теги с переводами, без этой строки ничего не будет работать -->
 
 <html lang="en">
 <head>
@@ -26,7 +26,9 @@
         <!-- В form реализуем форму выбора языка -->
         <form action="{% url 'set_language' %}" method="POST"> {% csrf_token %}
             <input type="hidden" name="next" value="{{ redirect_to }}">
+
                 {% get_current_language as LANGUAGE_CODE %}
+
                 <select name="language" id="">
                     {% get_available_languages as LANGUAGES %} <!-- получаем языки -->
                     {% get_language_info_list for LANGUAGES as languages %} <!-- Помещаем их в список languages -->
@@ -37,6 +39,7 @@
                         </option>
                     {% endfor %}
                 </select>
+
             <input type="submit" value="set">
         </form>
 

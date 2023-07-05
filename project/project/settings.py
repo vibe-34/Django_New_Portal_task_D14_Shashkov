@@ -73,6 +73,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
+    'news.middlewares.TimezoneMiddleware',  # для обработки часовых поясов
+
 
 ]
 
