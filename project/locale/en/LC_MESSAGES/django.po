@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-04 00:20+0300\n"
+"POT-Creation-Date: 2023-07-05 20:38+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,43 +26,43 @@ msgstr ""
 "Car audio and noise isolation studio, car acoustics andaccessories. All "
 "rights reserved."
 
-#: .\new_portal\templates\new_portal\default.html:43
+#: .\new_portal\templates\new_portal\default.html:50
 msgid "Навигация"
 msgstr "Navigation"
 
-#: .\new_portal\templates\new_portal\default.html:45
+#: .\new_portal\templates\new_portal\default.html:52
 msgid "Регистрация"
 msgstr "Registration"
 
-#: .\new_portal\templates\new_portal\default.html:46
+#: .\new_portal\templates\new_portal\default.html:53
 msgid "Вход"
 msgstr "Entrance"
 
-#: .\new_portal\templates\new_portal\default.html:47
+#: .\new_portal\templates\new_portal\default.html:54
 msgid "Выход"
 msgstr "Exit"
 
-#: .\new_portal\templates\new_portal\default.html:48
+#: .\new_portal\templates\new_portal\default.html:55
 msgid "Главная"
 msgstr "Home"
 
-#: .\new_portal\templates\new_portal\default.html:49
+#: .\new_portal\templates\new_portal\default.html:56
 msgid "Про нас"
 msgstr "About us"
 
-#: .\new_portal\templates\new_portal\default.html:50
+#: .\new_portal\templates\new_portal\default.html:57 .\news\models.py:26
 msgid "Новости"
 msgstr "News"
 
-#: .\new_portal\templates\new_portal\default.html:51
+#: .\new_portal\templates\new_portal\default.html:58
 msgid "Оформить подписку"
 msgstr "Subscribe"
 
-#: .\new_portal\templates\new_portal\default.html:52
+#: .\new_portal\templates\new_portal\default.html:59
 msgid "Поиск"
 msgstr "Search"
 
-#: .\new_portal\templates\new_portal\default.html:56
+#: .\new_portal\templates\new_portal\default.html:63
 msgid "Добавить запись"
 msgstr "Add post"
 
@@ -77,9 +77,49 @@ msgstr ""
 msgid "Двигайтесь с музыкой!"
 msgstr "Move with the music!"
 
+#: .\news\filters.py:11 .\news\models.py:12 .\news\models.py:33
+msgid "Категория"
+msgstr "Category"
+
+#: .\news\filters.py:12 .\news\forms.py:17
+msgid "Категория не выбрана"
+msgstr "Category not selected"
+
+#: .\news\filters.py:19
+msgid "Дата"
+msgstr "Date"
+
+#: .\news\forms.py:12
+msgid "Текст публикации"
+msgstr "Publication Search"
+
+#: .\news\forms.py:24
+msgid "Название публикации"
+msgstr "Form for adding a publication"
+
+#: .\news\forms.py:28 .\news\models.py:11
+msgid "Дата публикации"
+msgstr "Publication date"
+
+#: .\news\models.py:9
+msgid "Название"
+msgstr "Name"
+
+#: .\news\models.py:10
+msgid "Статья"
+msgstr "Article"
+
+#: .\news\models.py:25
+msgid "Новость"
+msgstr "News"
+
 #: .\news\models.py:30
-msgid "category name"
+msgid "category title"
 msgstr ""
+
+#: .\news\models.py:34
+msgid "Категории"
+msgstr "Category"
 
 #: .\news\templates\403.html:9
 msgid "Ошибка 403"
@@ -108,7 +148,7 @@ msgstr "Form for adding a publication"
 
 #: .\news\templates\news\news_delete.html:16
 msgid "Удалить статью"
-msgstr "Add post"
+msgstr "Delete article"
 
 #: .\news\templates\news\news_home.html:10
 #: .\news\templates\news\news_home.html:14
@@ -125,7 +165,7 @@ msgstr "No news!"
 
 #: .\news\templates\news\news_id.html:13
 msgid "дата публикации"
-msgstr "Add post"
+msgstr "publication date"
 
 #: .\news\templates\news\news_id.html:18
 msgid "Удалить"
@@ -135,17 +175,13 @@ msgstr "Delete"
 msgid "Редактировать"
 msgstr "Edit"
 
-#: .\news\templates\news\rus.html:28
-msgid "Check out my new cool translation"
-msgstr ""
-
 #: .\news\templates\news\search.html:10 .\news\templates\news\search.html:14
 msgid "Поиск публикации"
-msgstr "Add post"
+msgstr "Publication Search"
 
-#: .\news\views.py:19
-msgid "Hello world"
-msgstr ""
+#: .\news\templates\news\search.html:20
+msgid "Найти"
+msgstr "Find"
 
 #: .\templates\account\email\base_message.txt:3
 #, python-format
@@ -182,14 +218,14 @@ msgstr ""
 "\n"
 "Have a good day!\n"
 
-#: .\templates\subscriptions.html:4
+#: .\templates\subscriptions.html:7
 msgid "Подписки"
 msgstr "Subscriptions"
 
-#: .\templates\subscriptions.html:17 .\templates\subscriptions.html:20
+#: .\templates\subscriptions.html:20 .\templates\subscriptions.html:23
 msgid "Подписаться"
 msgstr "Subscribe"
 
-#: .\templates\subscriptions.html:18 .\templates\subscriptions.html:21
+#: .\templates\subscriptions.html:21 .\templates\subscriptions.html:24
 msgid "Отписаться"
 msgstr "Unsubscribe"

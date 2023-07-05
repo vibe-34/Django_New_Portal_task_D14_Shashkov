@@ -11,19 +11,29 @@ from django.shortcuts import render
 from django.views.decorators.csrf import csrf_protect
 from .models import Record, Category, Subscription
 
+from django.utils import timezone
+
 from django.utils.translation import gettext as _  # импортируем функцию для перевода
 
 
 class Index(View):  # TODO это тест, пробный перевод
     def get(self, request):
-        string = _('Hello world')
-        template_name = 'news/rus.html'
+        # string = _('Hello world')
+        # template_name = 'news/rus.html'
+        #
+        # # return HttpResponse(string)
+        #
+        # context = {'string': string}
+        # # return HttpResponse(render(request, 'news/rus.html', context))
+        # return HttpResponse(render(request, template_name, context))
 
-        # return HttpResponse(string)
+        # . Translators: This message appears on the home page only
+        models = Category.objects.all()
+        context = {'models': models, }
 
-        context = {'string': string}
-        # return HttpResponse(render(request, 'news/rus.html', context))
-        return HttpResponse(render(request, template_name, context))
+        curent_time = timezone.now()
+
+        return HttpResponse(render(request, 'news/rus.html', context))
 
 
 class NewsList(ListView):                   # Класс, который наследуется от ListView
