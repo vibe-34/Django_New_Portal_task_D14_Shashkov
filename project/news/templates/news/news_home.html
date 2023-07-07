@@ -12,6 +12,11 @@
 
 {% block content %}
 
+<!-- Если сейчас больше чем 19 или же меньше 7, то выводим тёмную тему, иначе выводим светлую -->
+    <style>
+        body {background-color: {% if current_time.hour >= 19 or current_time.hour <= 7 %} darkcyan {% else %} powderblue {% endif %};}
+    </style>
+
     <div class="features">
 
         {% get_current_timezone as TIME_ZONE %}
